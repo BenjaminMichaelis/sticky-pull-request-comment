@@ -10,7 +10,7 @@ This library runs with GitHub Actions. If you feel that the example grammar belo
 You need to add permissions for this tool.
 
 ```yaml
-permissions:
+permissions:dsdfasdfasdf
   pull-requests: write
 ```
 
