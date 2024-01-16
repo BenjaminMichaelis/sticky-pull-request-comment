@@ -1,13 +1,20 @@
 name: Test
 on:
-  workflow_dispatch:
-  pull_request_target:
   push:
     branches:
       - main
+  pull_request:
+  merge_group:
+    types:
+      - checks_requested
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: pwsh
 
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
